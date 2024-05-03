@@ -28,18 +28,13 @@ export class LoginComponent implements OnInit, OnDestroy {
     private http: HttpClient,
     private fb: FormBuilder,
     private cookieService: CookieService,
-    private router: Router
+    private router: Router,
   ) {
-    // redirect to home if already logged in
-    // if (this.authService.currentUserValue) {
-    //   this.router.navigate(['/']);
-    // }
   }
 
   ngOnInit(): void {
     this.initForm();
   }
-
   // convenience getter for easy access to form fields
   get f() {
     return this.loginForm.controls;
@@ -101,4 +96,5 @@ export class LoginComponent implements OnInit, OnDestroy {
       })
   }
 }
+
 

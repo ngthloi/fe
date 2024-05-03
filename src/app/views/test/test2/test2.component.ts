@@ -13,13 +13,14 @@ export class Test2Component {
 
   confirmLogout() {
     if (confirm("Are you sure you want to logout?")) {
+    
       // Xác nhận logout, chuyển hướng về trang launcher
       this.logout();
     }
   }
 
   logout() {
-    
+    localStorage.removeItem('session_login');
     this.router.navigate(['/pages/launcher']);
   }
 

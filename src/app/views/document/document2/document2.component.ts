@@ -1,6 +1,7 @@
-import { Component, } from '@angular/core';
+import { Component,} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import{AuthService} from'../../../auth.service'
+import { FormGroup,FormControl } from '@angular/forms';
 @Component({
   selector: 'app-document2',
   standalone: true,
