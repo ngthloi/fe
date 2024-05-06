@@ -1,16 +1,3 @@
-
-<!-- <button class="btn btn-success"(click)="addUser()"> Add User</button>
-<div class="row" *ngIf="!isCreateMode"> </div>
-<div class="row" *ngIf="isCreateMode">
-    <div  class = "col-md-12">
-        <div class ="row">
-            <div class="col-md-5">
-                <label>User Name</label>
-                <input type ="text"[(NgModel)]="user.name" placeholder="Name" class="form-control"/>
-            </div>
-        </div>
-    </div>
-</div> -->
 <table>
     <tr>
         <th>No</th>
@@ -18,7 +5,6 @@
         <th>Name</th>
         <th>PassWord</th>
     </tr>
-    
     <tr *ngFor= "let user of userList; index as i">
         <td> {{i+1 }}</td>
         <td>{{user.email }}</td>

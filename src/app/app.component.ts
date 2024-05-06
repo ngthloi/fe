@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-
 import { IconSetService } from '@coreui/icons-angular';
 
 
@@ -12,7 +11,7 @@ import { IconSetService } from '@coreui/icons-angular';
   imports: [RouterOutlet]
 })
 export class AppComponent implements OnInit {
-  title = 'CoreUI Angular Admin Template';
+  title = 'Website';
 
   constructor(
     private router: Router,
@@ -30,8 +29,6 @@ export class AppComponent implements OnInit {
 
     }
     this.titleService.setTitle(this.title);
-    // iconSet singleton
-    //this.iconSetService.icons = { ...iconSubset };
   }
 
   ngOnInit(): void {

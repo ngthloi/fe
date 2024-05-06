@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 @Component({
   selector: 'app-test2',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './test2.component.scss'
 })
 export class Test2Component {
-  constructor(private router: Router) { }
+  constructor(private router: Router,private authService : AuthServiceService,) { }
 
   confirmLogout() {
     if (confirm("Are you sure you want to logout?")) {
@@ -20,8 +21,8 @@ export class Test2Component {
   }
 
   logout() {
-    localStorage.removeItem('session_login');
-    this.router.navigate(['/pages/launcher']);
+    this.authService.logOut();
+    this.router.navigate(['/pages/login']);
   }
 
 }

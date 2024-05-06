@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Observable, Subscription } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     private fb: FormBuilder,
     private cookieService: CookieService,
     private router: Router,
+    private authService : AuthServiceService,
   ) {
   }
 
@@ -65,9 +67,6 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     );
   }
-
-
-
   ngOnDestroy() {
     this.unsubscribe.forEach((sb) => sb.unsubscribe());
   }
@@ -84,7 +83,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         if (user) {
           alert('Login Succesful');
           // console.log("user", user)
-          localStorage.setItem("session_login", JSON.stringify(user));
+          this.authService.setLogIn(JSON.stringify(user));
           // this.cookieService.set("session_login", JSON.stringify(user), 365, '/', 'localhost');
           this.loginForm.reset()
           this.router.navigate(["document/document1"])
