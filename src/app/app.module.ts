@@ -8,12 +8,13 @@ import { Document2Component } from './views/document/document2/document2.compone
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './views/pages/login/login.component';
 
-import { AppRoutingModule } from '../../src/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule,FormGroup } from '@angular/forms';
 import { MaterialModule } from '../app/material/material.module';
 import { MatCardModule } from '@angular/material/card';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
     Document1Component,
     Document2Component,
     LoginComponent,
+ 
 
   ],
   imports: [
@@ -30,7 +32,12 @@ import { MatCardModule } from '@angular/material/card';
     NgModule,
     ReactiveFormsModule,
     AppRoutingModule, 
-    MatCardModule,FormsModule,BrowserAnimationsModule
+    MatCardModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    ToastrModule.forRoot(),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

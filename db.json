@@ -43,10 +43,22 @@
       "password": "1234"
     },
     {
-      "id": "8d35",
-      "name": "tt",
-      "email": "t@gmail.com",
+      "id": "c0b1",
+      "name": "ty",
+      "email": "ty@gmail.com",
       "password": "1234"
+    }
+  ],
+  "role": [
+    {
+      "code": "user",
+      "name": "User",
+      "id": "ea91"
+    },
+    {
+      "code": "tech",
+      "name": "Technician",
+      "id": "f171"
     }
   ]
 }

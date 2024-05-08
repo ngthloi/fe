@@ -9,13 +9,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
-
+import {MatSelectModule} from '@angular/material/select';
+import{MatRadioModule} from '@angular/material/radio'
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule
+
   ],
   exports: [
     MatButtonModule,
@@ -26,7 +27,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }
